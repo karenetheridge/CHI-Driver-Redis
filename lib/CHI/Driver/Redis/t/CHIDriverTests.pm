@@ -1,4 +1,5 @@
 package CHI::Driver::Redis::t::CHIDriverTests;
+
 use strict;
 use warnings;
 use CHI::Test;

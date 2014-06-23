@@ -1,15 +1,14 @@
 package CHI::Driver::Redis;
-use Moose;
+# ABSTRACT: Redis driver for CHI
 
+use Moose;
 use Check::ISA;
 use Encode;
-use Redis;
+use Redis 1.2001;
 use Try::Tiny;
 use URI::Escape qw(uri_escape uri_unescape);
 
-extends 'CHI::Driver';
-
-our $VERSION = '0.04';
+extends 'CHI::Driver' => { -version => 0.36 };
 
 has 'redis' => (
     is => 'rw',
@@ -157,10 +156,6 @@ no Moose;
 
 __END__
 
-=head1 NAME
-
-CHI::Driver::Redis - Redis driver for CHI
-
 =head1 SYNOPSIS
 
     use CHI;
@@ -210,16 +205,4 @@ C<server> and C<debug> are passed to C<Redis>.
 
 Contains the underlying C<Redis> object.
 
-=head1 AUTHOR
-
-Cory G Watson, C<< <gphat at cpan.org> >>
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2009 Cold Hard Code, LLC.
-
-This program is free software; you can redistribute it and/or modify it
-under the terms of either: the GNU General Public License as published
-by the Free Software Foundation; or the Artistic License.
-
-See http://dev.perl.org/licenses/ for more information.
+=cut

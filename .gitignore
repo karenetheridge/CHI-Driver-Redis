@@ -1,0 +1,6 @@
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/CHI-Driver-Redis-*/
+/CHI-driver-Redis-*.tar.gz

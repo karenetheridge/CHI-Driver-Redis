@@ -1,26 +1,26 @@
-Revision history for CHI-Driver-Redis
+Revision history for {{$dist->name}}
 
-  * Use hashes to store info rather than crazy sets and keys.
-  * Indiscriminately turn off the UTF-8 flag on data coming out of
+{{$NEXT}}
+  - Use hashes to store info rather than crazy sets and keys.
+  - Indiscriminately turn off the UTF-8 flag on data coming out of
     Redis.pm so CHI can handle it.
-  * Bump dependency versions.
+  - Bump dependency versions.
 
-0.04    March 17, 2010
-  * Separate ping check from reconnection exceptions so that being disconnected
+0.04    2010-03-17
+  - Separate ping check from reconnection exceptions so that being disconnected
     doesn't become a permanent problem.  We now reconnect when Redis comes back.
 
-0.03    March 17, 2010
-  * PODed implementation details
-  * Conditional tests
+0.03    2010-03-17
+  - PODed implementation details
+  - Conditional tests
 
-0.02    December 22nd, 2009
-  * POD updates
-  * Rename _redis attribute to redis
-  * Lazily set redis attribute so that it is not populated until the first
+0.02    2009-12-22
+  - POD updates
+  - Rename _redis attribute to redis
+  - Lazily set redis attribute so that it is not populated until the first
     use.  This – plus some new error handling – prevent crazy explosions when
     Redis isn't available at instantiation time.
-  * Add warning for when ->ping fails
+  - Add warning for when ->ping fails
 
 0.01    2009-10-09
-        First version, released on an unsuspecting world.
-
+  - First version, released on an unsuspecting world.
