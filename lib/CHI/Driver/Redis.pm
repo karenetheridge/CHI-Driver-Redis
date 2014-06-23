@@ -127,7 +127,6 @@ sub _verify_redis_connection {
             die "Ping failed.";
         }
     } catch {
-        print STDERR "$_\n";
         warn "Error pinging redis, attempting to reconnect.\n";
     };
 
