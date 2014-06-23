@@ -200,8 +200,6 @@ This CHI driver uses Redis.pm.  Redis.pm blindly sets the UTF-8 flag to true
 on anything it retrieves from Redis.  This driver blindly unsets the same
 flag so that CHI can determine for itself how to encode the retrieved value.
 
-=over 4
-
 =head1 CONSTRUCTOR OPTIONS
 
 C<server> and C<debug> are passed to C<Redis>.
