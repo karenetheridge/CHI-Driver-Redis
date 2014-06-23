@@ -21,6 +21,6 @@ Revision history for CHI-Driver-Redis
     Redis isn't available at instantiation time.
   * Add warning for when ->ping fails
 
-0.01    Date/time
+0.01    2009-10-09
         First version, released on an unsuspecting world.
 
